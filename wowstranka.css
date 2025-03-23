@@ -1,0 +1,126 @@
+body{
+    background-image: url(obrazky/backgroundimage.jpg);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Zarovná vodorovně */
+    align-items: center; /* Zarovná svisle */
+    height: 70vh; 
+    margin: 0; /* Odstraní výchozí mezery */
+    padding-top: 50px; /* Trochu prostoru na začátku */
+}
+.container{
+    
+    width: 355px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 1px 2px 25px 10px #b6b5b5c4;
+    border-radius: 25px;
+    overflow-y: auto; /* Umožní scrollování, pokud je obsah vyšší než kontejner */
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    max-height: 20vh;
+    scroll-snap-align: center;
+   
+}
+
+/* Styl pro přizpůsobení vzhledu scroll baru */
+.container::-webkit-scrollbar {
+    width: 7px; /* Šířka posuvníku */
+    scrollbar-gutter: stable;
+}
+
+.container::-webkit-scrollbar-track {
+    background: #f5ecec; /* Barva pozadí pro oblast posuvníku */
+    border-radius: 10px; /* Zaoblení rohů pozadí posuvníku */
+  
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #c74e45; /* Barva samotného posuvníku */
+    border-radius: 10px; /* Zaoblení rohů posuvníku */
+    border: 2px solid #fff; /* Okraje pro lepší viditelnost */
+    
+}
+
+
+
+
+.container::-webkit-scrollbar-track-piece:end {
+    margin-bottom: auto; 
+}
+h1 {
+    margin-bottom: 15px;
+    color: #300e0ef6;
+    text-shadow: 1px 2px #f1e4e4f6;
+}
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+input{
+    width: 75%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+button{
+    padding: auto;
+    width: 85px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+    text-align: center;
+    border: 1px solid;
+    background: #cf534a;
+    color: white;
+    border-radius: 10px;
+    border-color: #fffffff6;
+    cursor: pointer;
+    box-shadow: 1px 1px 25px 3px #c74e45;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;;
+}
+button:hover{
+    
+    background-color: #b4463e;
+    transform: scale(1.03);
+    box-shadow: 1px 1px 25px 10px #e25a51;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    
+}
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    
+}
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delete-btn {
+    background: rgb(211, 1, 1);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #8b0000;
+    box-shadow: 1px 1px 15px 1px #ce1010f6;
+}
+
